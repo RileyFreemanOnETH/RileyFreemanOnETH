@@ -1,0 +1,112 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 100vh; /* Ensure a minimum height of the viewport */
+  display: flex;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: url(../images/concrete-seamless.jpg);
+  padding: 0;
+  margin: 0;
+}
+
+.coming-soon {
+  position: relative;
+  max-width: 90%;
+  width: auto; /* Adjusts width as per content */
+  margin: auto;
+  text-align: center;
+  border: 3px solid whitesmoke;
+  border-radius: 5px;
+  padding: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 10px 10px 10px rgb(54, 54, 54);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .coming-soon {
+    padding: 1.5rem; /* Reduce padding on smaller screens */
+    width: 95%; /* Increase width to use more screen space */
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(245, 245, 245, 0.541);
+  z-index: 1;
+  min-height: 100%;
+}
+
+.coming-soon h1,
+.coming-soon p,
+.coming-soon button {
+  z-index: 2;
+  position: relative;
+  text-shadow: 1px 1px 0 rgb(123, 123, 123);
+}
+
+p {
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    transform: translate(5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.coming-soon h1,
+.coming-soon p,
+.coming-soon .socials-button {
+  animation: glitch 500ms infinite;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  height: 25px;
+  background-color: rgba(128, 128, 128, 0.356);
+}
